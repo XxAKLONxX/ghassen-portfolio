@@ -1,0 +1,285 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Dark Theme Colors */
+  --background: #0a0f1c;
+  --foreground: #e5e7eb;
+  --card: #111827;
+  --card-foreground: #e5e7eb;
+  --popover: #1f2937;
+  --popover-foreground: #e5e7eb;
+  
+  /* Neon Accents */
+  --cyan: #27f5e0;
+  --cyan-light: #27f2f5;
+  --purple-accent: #7c3aed;
+  
+  /* UI Elements */
+  --primary: #27f5e0;
+  --primary-foreground: #0a0f1c;
+  --secondary: #27f2f5;
+  --secondary-foreground: #0a0f1c;
+  --muted: #374151;
+  --muted-foreground: #9ca3af;
+  --accent: #7c3aed;
+  --accent-foreground: #e5e7eb;
+  --destructive: #ef4444;
+  --destructive-foreground: #fef2f2;
+  
+  /* Borders & Inputs */
+  --border: #1f2937;
+  --input: #111827;
+  --ring: #27f5e0;
+  
+  /* Pixel Borders */
+  --pixel-border: 1px solid #27f5e0;
+  --pixel-border-subtle: 1px solid #374151;
+  
+  /* Glows */
+  --glow-cyan: 0 0 20px rgba(39, 245, 224, 0.3);
+  --glow-cyan-strong: 0 0 30px rgba(39, 245, 224, 0.5);
+  --glow-purple: 0 0 20px rgba(124, 58, 237, 0.3);
+  --glow-purple-strong: 0 0 30px rgba(124, 58, 237, 0.5);
+  
+  --radius: 2px;
+}
+
+.dark {
+  --background: #0a0f1c;
+  --foreground: #e5e7eb;
+  --card: #111827;
+  --card-foreground: #e5e7eb;
+  --popover: #1f2937;
+  --popover-foreground: #e5e7eb;
+  --primary: #27f5e0;
+  --primary-foreground: #0a0f1c;
+  --secondary: #27f2f5;
+  --secondary-foreground: #0a0f1c;
+  --muted: #374151;
+  --muted-foreground: #9ca3af;
+  --accent: #7c3aed;
+  --accent-foreground: #e5e7eb;
+  --destructive: #ef4444;
+  --destructive-foreground: #fef2f2;
+  --border: #1f2937;
+  --input: #111827;
+  --ring: #27f5e0;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+/* Glow effects for neon aesthetic */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(39, 245, 224, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(39, 245, 224, 0.5);
+  }
+}
+
+@keyframes glow-pulse-purple {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.5);
+  }
+}
+
+/* Subtle entrance animation */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glow text effect */
+@keyframes text-glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(39, 245, 224, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(39, 245, 224, 0.6);
+  }
+}
+
+/* Border slide effect */
+@keyframes border-slide {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Pixel pop animation */
+@keyframes pixel-pop {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Pixel-style borders (sharp, minimal rounding) */
+.pixel-border {
+  border: 1px solid var(--cyan);
+}
+
+.pixel-border-subtle {
+  border: 1px solid var(--border);
+}
+
+/* Glow utilities */
+.glow-cyan {
+  box-shadow: var(--glow-cyan);
+}
+
+.glow-cyan-strong {
+  box-shadow: var(--glow-cyan-strong);
+}
+
+.glow-purple {
+  box-shadow: var(--glow-purple);
+}
+
+.glow-purple-strong {
+  box-shadow: var(--glow-purple-strong);
+}
+
+.glow-cyan-pulse {
+  animation: glow-pulse 2s infinite;
+}
+
+.glow-purple-pulse {
+  animation: glow-pulse-purple 2s infinite;
+}
+
+/* Animation utilities */
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out;
+}
+
+.animate-text-glow {
+  animation: text-glow 3s ease-in-out infinite;
+}
+
+.animate-border-slide {
+  animation: border-slide 4s ease infinite;
+}
+
+.animate-pixel-pop {
+  animation: pixel-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Stagger animation helper */
+.animate-stagger > * {
+  animation: fade-in-up 0.6s ease-out backwards;
+}
+
+.animate-stagger > *:nth-child(1) { animation-delay: 0.1s; }
+.animate-stagger > *:nth-child(2) { animation-delay: 0.2s; }
+.animate-stagger > *:nth-child(3) { animation-delay: 0.3s; }
+.animate-stagger > *:nth-child(4) { animation-delay: 0.4s; }
+.animate-stagger > *:nth-child(5) { animation-delay: 0.5s; }
+.animate-stagger > *:nth-child(n+6) { animation-delay: 0.6s; }
+
+/* Enhanced focus and accessibility */
+.focus-glow:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+  box-shadow: var(--glow-cyan-strong);
+}
+
+.focus-glow-purple:focus-visible {
+  outline: 2px solid var(--purple-accent);
+  outline-offset: 2px;
+  box-shadow: var(--glow-purple-strong);
+}
+
+/* Smooth transitions on interactive elements */
+a, button, input, textarea, select {
+  @apply transition-all duration-200;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--cyan);
+  color: var(--background);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cyan);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan-light);
+  box-shadow: var(--glow-cyan);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply bg-background;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

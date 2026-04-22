@@ -1,0 +1,223 @@
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { Navigation } from '@/components/navigation';
+import { Footer } from '@/components/footer';
+import { PixelCard } from '@/components/pixel-card';
+import { PixelBadge } from '@/components/pixel-badge';
+import { PixelGrid } from '@/components/pixel-grid';
+import { JsonLd } from '@/components/json-ld';
+import { locales, pageSEO, type Locale } from '@/lib/i18n';
+import { absUrl, languageAlternates, breadcrumbSchema, skillsSchema } from '@/lib/schema';
+
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: raw } = await params;
+  if (!(locales as string[]).includes(raw)) notFound();
+  const locale = raw as Locale;
+  const seo = pageSEO.skills[locale];
+  return {
+    title: seo.title,
+    description: seo.description,
+    alternates: { canonical: absUrl(locale, 'skills'), languages: languageAlternates('skills') },
+    openGraph: { url: absUrl(locale, 'skills'), title: seo.title, description: seo.description },
+    twitter: { title: seo.title, description: seo.description },
+    keywords: [seo.keyword, 'Google Ads Tunis', 'Ghassen Bahroun'],
+  };
+}
+
+const skillsForSchema = [
+  'Google Ads', 'Google Search Console', 'Google Analytics 4', 'SEMrush', 'Screaming Frog',
+  'Looker Studio', 'Technical SEO', 'WordPress', 'Shopify', 'Yoast SEO', 'Strapi',
+  'HTML/CSS', 'JavaScript', 'Python', 'Performance Max', 'Multilingual SEO',
+];
+
+export default async function Skills({ params }: Props) {
+  const { locale: raw } = await params;
+  if (!(locales as string[]).includes(raw)) notFound();
+  const locale = raw as Locale;
+  const skillCategories = [
+    {
+      title: 'SEO/SEM',
+      description: 'Expert in search optimization and paid advertising strategies',
+      skills: [
+        { name: 'Google Ads', level: 'Expert' },
+        { name: 'Google Search Console', level: 'Expert' },
+        { name: 'Google Analytics', level: 'Expert' },
+        { name: 'SEMrush', level: 'Advanced' },
+        { name: 'Screaming Frog', level: 'Advanced' },
+        { name: 'Technical SEO', level: 'Expert' },
+      ],
+    },
+    {
+      title: 'Analytics & Reporting',
+      description: 'Data-driven insights and comprehensive performance tracking',
+      skills: [
+        { name: 'Looker Studio', level: 'Expert' },
+        { name: 'Google Analytics 4', level: 'Expert' },
+        { name: 'Performance Tracking', level: 'Expert' },
+        { name: 'Data Visualization', level: 'Advanced' },
+        { name: 'Reporting & Dashboards', level: 'Advanced' },
+        { name: 'Campaign Analysis', level: 'Expert' },
+      ],
+    },
+    {
+      title: 'Platforms',
+      description: 'Experience with major CMS and project management tools',
+      skills: [
+        { name: 'WordPress', level: 'Expert' },
+        { name: 'Shopify', level: 'Advanced' },
+        { name: 'Yoast SEO', level: 'Expert' },
+        { name: 'Strapi', level: 'Intermediate' },
+        { name: 'ClickUp', level: 'Advanced' },
+      ],
+    },
+    {
+      title: 'Development',
+      description: 'Web technologies and coding fundamentals',
+      skills: [
+        { name: 'HTML/CSS', level: 'Proficient' },
+        { name: 'JavaScript', level: 'Intermediate' },
+        { name: 'Website Architecture', level: 'Advanced' },
+      ],
+    },
+  ];
+
+  const expertise = [
+    {
+      icon: '🎯',
+      title: 'Campaign Management',
+      description: 'Managed 41+ paid search campaigns with consistent optimization and improvement',
+    },
+    {
+      icon: '📊',
+      title: 'Data Analytics',
+      description: 'Advanced analytics implementation and comprehensive performance reporting',
+    },
+    {
+      icon: '🔧',
+      title: 'Technical SEO',
+      description: 'Website architecture design and technical optimization from ground up',
+    },
+    {
+      icon: '🌍',
+      title: 'International Markets',
+      description: 'Multi-language expertise (Arabic, French, English) and cross-border campaigns',
+    },
+    {
+      icon: '📈',
+      title: 'Performance Optimization',
+      description: '18 months of continuous improvement across 36 SEA campaigns',
+    },
+    {
+      icon: '🤝',
+      title: 'Strategic Planning',
+      description: 'Long-term vision development and roadmap creation for digital growth',
+    },
+  ];
+
+  return (
+    <>
+      <JsonLd data={[breadcrumbSchema(locale, 'skills', 'Skills'), skillsSchema(locale, skillsForSchema)]} />
+      <Navigation />
+      <main className="min-h-screen">
+        {/* Hero Section */}
+        <section className="py-16 md:py-24 border-b border-border">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-5xl font-bold">Skills & Expertise</h1>
+              <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
+                Comprehensive toolkit spanning SEO/SEM, analytics, platform expertise, and strategic
+                digital marketing with 4+ years of hands-on experience.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Skills by Category */}
+        <section className="py-16 md:py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="space-y-12">
+              {skillCategories.map((category) => (
+                <div key={category.title} className="space-y-6">
+                  <div className="space-y-2">
+                    <h2 className="text-2xl md:text-3xl font-bold">{category.title}</h2>
+                    <p className="text-muted-foreground">{category.description}</p>
+                  </div>
+
+                  <PixelGrid cols={2} gap="md">
+                    {category.skills.map((skill) => (
+                      <PixelCard key={skill.name} variant="subtle">
+                        <div className="flex items-center justify-between gap-4">
+                          <h3 className="font-semibold text-foreground">{skill.name}</h3>
+                          <PixelBadge
+                            variant={
+                              skill.level === 'Expert'
+                                ? 'primary'
+                                : skill.level === 'Advanced'
+                                  ? 'secondary'
+                                  : 'muted'
+                            }
+                            size="sm"
+                          >
+                            {skill.level}
+                          </PixelBadge>
+                        </div>
+                      </PixelCard>
+                    ))}
+                  </PixelGrid>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Core Expertise */}
+        <section className="py-16 md:py-24 border-t border-border">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-12">Core Expertise</h2>
+            <PixelGrid cols={3} gap="lg">
+              {expertise.map((item) => (
+                <PixelCard key={item.title} variant="glow">
+                  <div className="space-y-4 text-center">
+                    <div className="text-4xl">{item.icon}</div>
+                    <h3 className="font-semibold text-foreground text-lg">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                  </div>
+                </PixelCard>
+              ))}
+            </PixelGrid>
+          </div>
+        </section>
+
+        {/* Growth Areas */}
+        <section className="py-16 md:py-24 border-t border-border bg-card/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl md:text-3xl font-bold mb-12">Continuous Learning</h2>
+            <PixelGrid cols={2} gap="lg">
+              <PixelCard variant="glow">
+                <div className="space-y-3">
+                  <h3 className="font-semibold text-foreground">Industry Knowledge</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Staying updated with latest Google algorithm updates, SEO best practices, and
+                    emerging digital marketing trends.
+                  </p>
+                </div>
+              </PixelCard>
+              <PixelCard variant="glow">
+                <div className="space-y-3">
+                  <h3 className="font-semibold text-foreground">Technical Development</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Expanding web development capabilities and deepening expertise in modern tech
+                    stack and automation tools.
+                  </p>
+                </div>
+              </PixelCard>
+            </PixelGrid>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
