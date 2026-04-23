@@ -1,6 +1,6 @@
 // Site-wide SEO + i18n configuration
 
-export const SITE_URL = 'https://ghassen-bahroun.pages.dev';
+export const SITE_URL = 'https://seo.ghassenbahroun.workers.dev';
 export const SITE_NAME = 'Ghassen Bahroun';
 export const SITE_AUTHOR = 'Ghassen Bahroun';
 export const GITHUB_URL = 'https://github.com/XxAKLONxX';
