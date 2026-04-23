@@ -95,7 +95,7 @@ export function LanguageSwitcher({ currentLocale, variant = 'nav' }: LanguageSwi
         className={cn(
           'inline-flex items-center gap-2 border rounded-sm text-sm font-mono transition-all duration-200 focus-glow',
           variant === 'nav'
-            ? 'h-9 px-3 border-border text-muted-foreground hover:text-cyan hover:border-cyan'
+            ? 'h-10 sm:h-9 px-3 border-border text-muted-foreground hover:text-cyan hover:border-cyan'
             : 'h-8 px-2.5 border-border/60 text-muted-foreground hover:text-cyan hover:border-cyan/50',
         )}
         aria-haspopup="listbox"
@@ -103,8 +103,7 @@ export function LanguageSwitcher({ currentLocale, variant = 'nav' }: LanguageSwi
         aria-label="Select language"
       >
         <Globe className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
-        {Flags[currentLocale]}
-        <span className="hidden md:inline text-xs uppercase tracking-wide">
+        <span className="text-xs uppercase tracking-wide">
           {current.htmlLang}
         </span>
         <ChevronDown
@@ -116,7 +115,7 @@ export function LanguageSwitcher({ currentLocale, variant = 'nav' }: LanguageSwi
       {open && (
         <div
           role="listbox"
-          className="absolute right-0 top-full mt-1 min-w-[160px] bg-card border border-border rounded-sm shadow-lg glow-cyan z-50 overflow-hidden animate-pixel-pop"
+          className="absolute right-0 top-full mt-1 min-w-[180px] sm:min-w-[160px] bg-card border border-border rounded-sm shadow-lg glow-cyan z-50 overflow-hidden animate-pixel-pop"
         >
           {(locales as Locale[]).map((loc) => {
             const m = localeMeta[loc];
@@ -128,7 +127,7 @@ export function LanguageSwitcher({ currentLocale, variant = 'nav' }: LanguageSwi
                 aria-selected={active}
                 onClick={() => switchTo(loc)}
                 className={cn(
-                  'w-full flex items-center gap-3 px-3 py-2.5 text-sm font-mono transition-colors duration-150 text-left',
+                  'w-full flex items-center gap-3 px-4 py-3.5 sm:py-2.5 text-sm font-mono transition-colors duration-150 text-left',
                   active
                     ? 'bg-cyan/10 text-cyan'
                     : 'text-muted-foreground hover:bg-card-foreground/5 hover:text-cyan',

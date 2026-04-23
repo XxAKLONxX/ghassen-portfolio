@@ -8,6 +8,7 @@ import { PixelCard } from '@/components/pixel-card';
 import { PixelBadge } from '@/components/pixel-badge';
 import { PixelGrid } from '@/components/pixel-grid';
 import { JsonLd } from '@/components/json-ld';
+import { Terminal } from '@/components/terminal';
 import { Download, Github } from 'lucide-react';
 import {
   locales,
@@ -153,29 +154,29 @@ export default async function Home({ params }: Props) {
       <Navigation />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 md:py-32 bg-gradient-to-b from-background to-card/20">
+        <section className="relative overflow-hidden py-12 sm:py-16 md:py-24 lg:py-32 bg-gradient-to-b from-background to-card/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-stagger">
-              <div className="space-y-8 animate-fade-in-up">
-                <div className="space-y-4">
-                  <p className="text-cyan font-mono text-sm font-semibold">{copy.kicker}</p>
-                  <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-balance">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center animate-stagger">
+              <div className="space-y-6 sm:space-y-8 animate-fade-in-up">
+                <div className="space-y-3 sm:space-y-4">
+                  <p className="text-cyan font-mono text-xs sm:text-sm font-semibold">{copy.kicker}</p>
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance">
                     {copy.headingPrefix}{' '}
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan to-cyan-light">
                       {copy.headingAccent}
                     </span>
                   </h1>
-                  <p className="text-muted-foreground text-lg leading-relaxed max-w-lg">
+                  <p className="text-muted-foreground text-base sm:text-lg leading-relaxed max-w-lg">
                     {copy.lead}
                   </p>
                 </div>
 
-                <div className="flex flex-wrap gap-4 pt-4">
+                <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2 sm:pt-4">
                   <Link href={`/${locale}/${pagePaths.experience}`}>
-                    <PixelButton variant="primary" size="lg">{copy.viewWork}</PixelButton>
+                    <PixelButton variant="primary" size="lg" className="w-full sm:w-auto justify-center">{copy.viewWork}</PixelButton>
                   </Link>
                   <Link href={`/${locale}/${pagePaths.contact}`}>
-                    <PixelButton variant="outline" size="lg">{copy.getInTouch}</PixelButton>
+                    <PixelButton variant="outline" size="lg" className="w-full sm:w-auto justify-center">{copy.getInTouch}</PixelButton>
                   </Link>
                   <a href="/BAHROUN_Ghassen_CV_En_2026.docx" download>
                     <PixelButton variant="secondary" size="lg">
@@ -201,24 +202,39 @@ export default async function Home({ params }: Props) {
                 </div>
               </div>
 
-              <div className="hidden lg:block">
-                <div className="relative">
+              <div className="block">
+                <div className="relative space-y-4">
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan/20 to-purple-accent/20 rounded-sm blur-2xl"></div>
-                  <div className="relative bg-card border border-border rounded-sm p-8 space-y-6">
-                    <div className="space-y-3">
-                      {[1, 2, 3].map((i) => (
-                        <div key={i} className="h-3 bg-muted/30 rounded-sm"></div>
-                      ))}
-                    </div>
-                    <div className="grid grid-cols-2 gap-4 pt-4">
-                      {[1, 2, 3, 4].map((i) => (
-                        <div
-                          key={i}
-                          className="h-16 bg-gradient-to-br from-cyan/10 to-purple-accent/10 border border-border rounded-sm"
-                        ></div>
-                      ))}
-                    </div>
+
+                  {/* Pixel Google G card — desktop only */}
+                  <div className="hidden lg:flex relative bg-card border border-border rounded-sm p-8 space-y-4 flex-col items-center">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/icons/google_pixel.svg"
+                      alt="Google Ads specialist"
+                      className="w-32 h-24 animate-float"
+                    />
+                    <p className="text-center font-mono text-xs text-muted-foreground tracking-wide">
+                      // Google Ads · GSC · GA4 specialist
+                    </p>
                   </div>
+
+                  {/* Terminal — visible on all screens */}
+                  <Terminal
+                    title="ghassen@portfolio ~ /status"
+                    lines={[
+                      { type: 'cmd', text: 'whoami' },
+                      { type: 'output', text: 'Ghassen Bahroun — SEO/SEM Specialist' },
+                      { type: 'comment', text: 'current role' },
+                      { type: 'kv', key: 'role', val: 'SEO/SEM @ Pinet Industrie' },
+                      { type: 'kv', key: 'focus', val: 'Multilingual B2B · 5 markets' },
+                      { type: 'kv', key: 'location', val: 'Tunisia → Worldwide' },
+                      { type: 'comment', text: 'stack' },
+                      { type: 'kv', key: 'tools', val: 'GSC, SEMrush, Looker, Python' },
+                      { type: 'blink' },
+                    ]}
+                    className="relative"
+                  />
                 </div>
               </div>
             </div>
