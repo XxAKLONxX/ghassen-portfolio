@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 1.32 16 2.64 16 4 C10.72 4 5.44 4 0 4 C0 2.68 0 1.36 0 0 Z " fill="currentColor" transform="translate(24,6)"/>
+<path d="M0 0 C1.32 0 2.64 0 4 0 C4 3.96 4 7.92 4 12 C2.68 12 1.36 12 0 12 C0 8.04 0 4.08 0 0 Z " fill="currentColor" transform="translate(52,22)"/>
+<path d="M0 0 C1.32 0 2.64 0 4 0 C4 3.96 4 7.92 4 12 C2.68 12 1.36 12 0 12 C0 8.04 0 4.08 0 0 Z " fill="currentColor" transform="translate(8,22)"/>
+<path d="M0 0 C1.32 0 2.64 0 4 0 C4 2.64 4 5.28 4 8 C2.68 8 1.36 8 0 8 C0 5.36 0 2.72 0 0 Z " fill="currentColor" transform="translate(48,34)"/>
+<path d="M0 0 C1.32 0 2.64 0 4 0 C4 2.64 4 5.28 4 8 C2.68 8 1.36 8 0 8 C0 5.36 0 2.72 0 0 Z " fill="currentColor" transform="translate(12,34)"/>
+<path d="M0 0 C2.64 0 5.28 0 8 0 C8 1.32 8 2.64 8 4 C5.36 4 2.72 4 0 4 C0 2.68 0 1.36 0 0 Z " fill="currentColor" transform="translate(28,32)"/>
+<path d="M0 0 C1.32 0 2.64 0 4 0 C4 2.64 4 5.28 4 8 C2.68 8 1.36 8 0 8 C0 5.36 0 2.72 0 0 Z " fill="currentColor" transform="translate(36,24)"/>
+<path d="M0 0 C1.32 0 2.64 0 4 0 C4 2.64 4 5.28 4 8 C2.68 8 1.36 8 0 8 C0 5.36 0 2.72 0 0 Z " fill="currentColor" transform="translate(24,24)"/>
+<path d="M0 0 C2.64 0 5.28 0 8 0 C8 1.32 8 2.64 8 4 C5.36 4 2.72 4 0 4 C0 2.68 0 1.36 0 0 Z " fill="currentColor" transform="translate(28,20)"/>
+<path d="M0 0 C1.32 0 2.64 0 4 0 C4 2.64 4 5.28 4 8 C2.68 8 1.36 8 0 8 C0 5.36 0 2.72 0 0 Z " fill="currentColor" transform="translate(48,14)"/>
+<path d="M0 0 C1.32 0 2.64 0 4 0 C4 2.64 4 5.28 4 8 C2.68 8 1.36 8 0 8 C0 5.36 0 2.72 0 0 Z " fill="currentColor" transform="translate(12,14)"/>
+<path d="M0 0 C2.64 0 5.28 0 8 0 C8 1.32 8 2.64 8 4 C5.36 4 2.72 4 0 4 C0 2.68 0 1.36 0 0 Z " fill="currentColor" transform="translate(40,10)"/>
+<path d="M0 0 C2.64 0 5.28 0 8 0 C8 1.32 8 2.64 8 4 C5.36 4 2.72 4 0 4 C0 2.68 0 1.36 0 0 Z " fill="currentColor" transform="translate(16,10)"/>
+<path d="M0 0 C1.98 0 3.96 0 6 0 C6 1.32 6 2.64 6 4 C4.02 4 2.04 4 0 4 C0 2.68 0 1.36 0 0 Z " fill="currentColor" transform="translate(38,46)"/>
+<path d="M0 0 C1.98 0 3.96 0 6 0 C6 1.32 6 2.64 6 4 C4.02 4 2.04 4 0 4 C0 2.68 0 1.36 0 0 Z " fill="currentColor" transform="translate(20,46)"/>
+<path d="M0 0 C1.32 0 2.64 0 4 0 C4 1.32 4 2.64 4 4 C2.68 4 1.36 4 0 4 C0 2.68 0 1.36 0 0 Z " fill="currentColor" transform="translate(30,54)"/>
+<path d="M0 0 C1.32 0 2.64 0 4 0 C4 1.32 4 2.64 4 4 C2.68 4 1.36 4 0 4 C0 2.68 0 1.36 0 0 Z " fill="currentColor" transform="translate(34,50)"/>
+<path d="M0 0 C1.32 0 2.64 0 4 0 C4 1.32 4 2.64 4 4 C2.68 4 1.36 4 0 4 C0 2.68 0 1.36 0 0 Z " fill="currentColor" transform="translate(26,50)"/>
+<path d="M0 0 C1.32 0 2.64 0 4 0 C4 1.32 4 2.64 4 4 C2.68 4 1.36 4 0 4 C0 2.68 0 1.36 0 0 Z " fill="currentColor" transform="translate(44,42)"/>
+<path d="M0 0 C1.32 0 2.64 0 4 0 C4 1.32 4 2.64 4 4 C2.68 4 1.36 4 0 4 C0 2.68 0 1.36 0 0 Z " fill="currentColor" transform="translate(16,42)"/>
+</svg>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="512" height="512">
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 47.52 16 95.04 16 144 C21.28 144 26.56 144 32 144 C32 149.28 32 154.56 32 160 C21.44 160 10.88 160 0 160 C0 107.2 0 54.4 0 0 Z " fill="currentColor" transform="translate(272,112)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 52.8 16 105.6 16 160 C5.44 160 -5.12 160 -16 160 C-16 154.72 -16 149.44 -16 144 C-10.72 144 -5.44 144 0 144 C0 96.48 0 48.96 0 0 Z " fill="currentColor" transform="translate(208,112)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 36.96 16 73.92 16 112 C10.72 112 5.44 112 0 112 C0 75.04 0 38.08 0 0 Z " fill="currentColor" transform="translate(256,272)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 36.96 16 73.92 16 112 C10.72 112 5.44 112 0 112 C0 75.04 0 38.08 0 0 Z " fill="currentColor" transform="translate(224,272)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 31.68 16 63.36 16 96 C10.72 96 5.44 96 0 96 C0 64.32 0 32.64 0 0 Z " fill="currentColor" transform="translate(320,112)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 31.68 16 63.36 16 96 C10.72 96 5.44 96 0 96 C0 64.32 0 32.64 0 0 Z " fill="currentColor" transform="translate(160,112)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 26.4 16 52.8 16 80 C10.72 80 5.44 80 0 80 C0 53.6 0 27.2 0 0 Z " fill="currentColor" transform="translate(304,272)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 26.4 16 52.8 16 80 C10.72 80 5.44 80 0 80 C0 53.6 0 27.2 0 0 Z " fill="currentColor" transform="translate(176,272)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 21.12 16 42.24 16 64 C10.72 64 5.44 64 0 64 C0 42.88 0 21.76 0 0 Z " fill="currentColor" transform="translate(352,272)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 21.12 16 42.24 16 64 C10.72 64 5.44 64 0 64 C0 42.88 0 21.76 0 0 Z " fill="currentColor" transform="translate(128,272)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 21.12 16 42.24 16 64 C10.72 64 5.44 64 0 64 C0 42.88 0 21.76 0 0 Z " fill="currentColor" transform="translate(336,208)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 21.12 16 42.24 16 64 C10.72 64 5.44 64 0 64 C0 42.88 0 21.76 0 0 Z " fill="currentColor" transform="translate(144,208)"/>
+<path d="M0 0 C15.84 0 31.68 0 48 0 C48 5.28 48 10.56 48 16 C32.16 16 16.32 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(384,160)"/>
+<path d="M0 0 C15.84 0 31.68 0 48 0 C48 5.28 48 10.56 48 16 C32.16 16 16.32 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(64,160)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 15.84 16 31.68 16 48 C10.72 48 5.44 48 0 48 C0 32.16 0 16.32 0 0 Z " fill="currentColor" transform="translate(240,16)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 10.56 16 21.12 16 32 C10.72 32 5.44 32 0 32 C0 21.44 0 10.88 0 0 Z " fill="currentColor" transform="translate(272,384)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 10.56 16 21.12 16 32 C10.72 32 5.44 32 0 32 C0 21.44 0 10.88 0 0 Z " fill="currentColor" transform="translate(208,384)"/>
+<path d="M0 0 C10.56 0 21.12 0 32 0 C32 5.28 32 10.56 32 16 C21.44 16 10.88 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(288,96)"/>
+<path d="M0 0 C10.56 0 21.12 0 32 0 C32 5.28 32 10.56 32 16 C21.44 16 10.88 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(176,96)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(352,480)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(128,480)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(336,464)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(144,464)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(320,448)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(160,448)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(304,432)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(176,432)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(288,416)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(192,416)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(432,400)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(48,400)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(416,384)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(64,384)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(400,368)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(80,368)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(384,352)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(96,352)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(368,336)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(112,336)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(416,256)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(64,256)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(400,240)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(80,240)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(384,224)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(96,224)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(368,96)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(112,96)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(384,80)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(96,80)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(400,64)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(80,64)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(320,48)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(160,48)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(336,32)"/>
+<path d="M0 0 C5.28 0 10.56 0 16 0 C16 5.28 16 10.56 16 16 C10.72 16 5.44 16 0 16 C0 10.72 0 5.44 0 0 Z " fill="currentColor" transform="translate(144,32)"/>
+</svg>
