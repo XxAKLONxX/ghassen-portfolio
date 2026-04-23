@@ -6,6 +6,7 @@ import { PixelCard } from '@/components/pixel-card';
 import { PixelBadge } from '@/components/pixel-badge';
 import { PixelGrid } from '@/components/pixel-grid';
 import { JsonLd } from '@/components/json-ld';
+import { PixelIcon } from '@/components/pixel-icon';
 import { locales, pageSEO, type Locale } from '@/lib/i18n';
 import { absUrl, languageAlternates, breadcrumbSchema, skillsSchema } from '@/lib/schema';
 
@@ -85,32 +86,32 @@ export default async function Skills({ params }: Props) {
 
   const expertise = [
     {
-      icon: '🎯',
+      icon: 'analysis',
       title: 'Campaign Management',
       description: 'Managed 41+ paid search campaigns with consistent optimization and improvement',
     },
     {
-      icon: '📊',
+      icon: 'database',
       title: 'Data Analytics',
       description: 'Advanced analytics implementation and comprehensive performance reporting',
     },
     {
-      icon: '🔧',
+      icon: 'wrench',
       title: 'Technical SEO',
       description: 'Website architecture design and technical optimization from ground up',
     },
     {
-      icon: '🌍',
+      icon: 'world',
       title: 'International Markets',
       description: 'Multi-language expertise (Arabic, French, English) and cross-border campaigns',
     },
     {
-      icon: '📈',
+      icon: 'bar-chart',
       title: 'Performance Optimization',
       description: '18 months of continuous improvement across 36 SEA campaigns',
     },
     {
-      icon: '🤝',
+      icon: 'five',
       title: 'Strategic Planning',
       description: 'Long-term vision development and roadmap creation for digital growth',
     },
@@ -179,8 +180,8 @@ export default async function Skills({ params }: Props) {
             <PixelGrid cols={3} gap="lg">
               {expertise.map((item) => (
                 <PixelCard key={item.title} variant="glow">
-                  <div className="space-y-4 text-center">
-                    <div className="text-4xl">{item.icon}</div>
+                  <div className="space-y-4 text-center flex flex-col items-center">
+                    <PixelIcon name={item.icon} size={48} alt={item.title} className="text-cyan" />
                     <h3 className="font-semibold text-foreground text-lg">{item.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                   </div>

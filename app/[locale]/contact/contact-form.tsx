@@ -7,6 +7,7 @@ import { PixelButton } from '@/components/pixel-button';
 import { PixelCard } from '@/components/pixel-card';
 import { PixelBadge } from '@/components/pixel-badge';
 import { PixelGrid } from '@/components/pixel-grid';
+import { PixelIcon } from '@/components/pixel-icon';
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -45,25 +46,25 @@ export function ContactForm() {
       label: 'Email',
       value: 'ghassenbahroun@yahoo.fr',
       href: 'mailto:ghassenbahroun@yahoo.fr',
-      icon: '✉',
+      icon: 'envelope',
     },
     {
       label: 'Phone',
       value: '+216 58851996',
       href: 'tel:+21658851996',
-      icon: '📱',
+      icon: 'icons8-phone-64',
     },
     {
       label: 'Location',
       value: 'Sousse, Djerba, Tunis - Tunisia',
       href: '#',
-      icon: '📍',
+      icon: 'icons8-location-64',
     },
     {
       label: 'Availability',
       value: 'Remote Work Worldwide',
       href: '#',
-      icon: '🌍',
+      icon: 'world',
     },
   ];
 
@@ -91,7 +92,7 @@ export function ContactForm() {
               {contactInfo.map((info) => (
                 <PixelCard key={info.label} variant="glow">
                   <div className="space-y-3">
-                    <div className="text-3xl">{info.icon}</div>
+                    <PixelIcon name={info.icon} size={36} alt={info.label} className="text-cyan" />
                     <h3 className="font-semibold text-foreground">{info.label}</h3>
                     {info.href && info.href !== '#' ? (
                       <a

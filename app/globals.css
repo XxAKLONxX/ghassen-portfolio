@@ -164,6 +164,22 @@
   }
 }
 
+/* Terminal cursor blink */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Float animation for hero logo */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
 /* Pixel-style borders (sharp, minimal rounding) */
 .pixel-border {
   border: 1px solid var(--cyan);

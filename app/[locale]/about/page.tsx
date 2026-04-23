@@ -6,6 +6,7 @@ import { PixelCard } from '@/components/pixel-card';
 import { PixelBadge } from '@/components/pixel-badge';
 import { PixelGrid } from '@/components/pixel-grid';
 import { JsonLd } from '@/components/json-ld';
+import { PixelIcon } from '@/components/pixel-icon';
 import { locales, pageSEO, type Locale } from '@/lib/i18n';
 import { absUrl, languageAlternates, breadcrumbSchema, aboutPageSchema } from '@/lib/schema';
 
@@ -77,22 +78,22 @@ export default async function About({ params }: Props) {
     {
       title: 'Data-Driven',
       description: 'Every decision backed by analytics and performance metrics',
-      icon: '📊',
+      icon: 'database',
     },
     {
       title: 'Strategic',
       description: 'Long-term vision combined with tactical execution',
-      icon: '🎯',
+      icon: 'planing',
     },
     {
       title: 'Innovative',
       description: 'Staying ahead of market trends and algorithm updates',
-      icon: '⚡',
+      icon: 'start-up',
     },
     {
       title: 'Collaborative',
       description: 'Working closely with teams to align on goals',
-      icon: '🤝',
+      icon: 'five',
     },
   ];
 
@@ -137,8 +138,8 @@ export default async function About({ params }: Props) {
               <div className="space-y-4">
                 {values.map((value) => (
                   <PixelCard key={value.title} variant="subtle">
-                    <div className="flex gap-4">
-                      <div className="text-3xl">{value.icon}</div>
+                    <div className="flex gap-4 items-start">
+                      <PixelIcon name={value.icon} size={36} alt={value.title} className="text-cyan shrink-0 mt-1" />
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">{value.title}</h3>
                         <p className="text-muted-foreground text-sm">{value.description}</p>

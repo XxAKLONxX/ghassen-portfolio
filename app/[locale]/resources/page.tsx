@@ -7,6 +7,7 @@ import { PixelBadge } from '@/components/pixel-badge';
 import { PixelGrid } from '@/components/pixel-grid';
 import { PixelButton } from '@/components/pixel-button';
 import { JsonLd } from '@/components/json-ld';
+import { Terminal } from '@/components/terminal';
 import { Download, ExternalLink, Github, FileCheck, Search, Wrench, Clock } from 'lucide-react';
 import Link from 'next/link';
 import { locales, pageSEO, type Locale, SITE_URL } from '@/lib/i18n';
@@ -53,6 +54,16 @@ export default async function Resources({ params }: Props) {
       href: '/resources/seo-site-audit-checklist.md',
       cta: 'Download .md',
       download: true,
+      termTitle: '~/seo-site-audit.md',
+      preview: [
+        { type: 'cmd' as const, text: 'cat seo-site-audit.md | head' },
+        { type: 'comment' as const, text: 'Section 1 — Crawl & Indexation' },
+        { type: 'kv' as const, key: 'robots', val: 'verify disallow rules' },
+        { type: 'kv' as const, key: 'sitemap', val: 'canonical 200s only' },
+        { type: 'kv' as const, key: 'gsc', val: 'review Pages report' },
+        { type: 'comment' as const, text: '10 sections · 80+ checks' },
+        { type: 'blink' as const },
+      ],
     },
     {
       title: 'Keyword Research Template',
@@ -67,6 +78,16 @@ export default async function Resources({ params }: Props) {
       href: '/resources/keyword-research-template.md',
       cta: 'Download .md',
       download: true,
+      termTitle: '~/keyword-research.md',
+      preview: [
+        { type: 'cmd' as const, text: 'cat keyword-research.md | head' },
+        { type: 'comment' as const, text: '7-phase framework' },
+        { type: 'kv' as const, key: 'phase-1', val: 'foundation & goals' },
+        { type: 'kv' as const, key: 'phase-2', val: 'seed discovery (30-80)' },
+        { type: 'kv' as const, key: 'phase-5', val: 'clustering by intent' },
+        { type: 'comment' as const, text: 'full column schema included' },
+        { type: 'blink' as const },
+      ],
     },
     {
       title: 'Technical SEO Checklist',
@@ -81,6 +102,16 @@ export default async function Resources({ params }: Props) {
       href: '/resources/technical-seo-checklist.md',
       cta: 'Download .md',
       download: true,
+      termTitle: '~/technical-seo.md',
+      preview: [
+        { type: 'cmd' as const, text: 'cat technical-seo.md | head' },
+        { type: 'comment' as const, text: 'Core Web Vitals targets' },
+        { type: 'kv' as const, key: 'LCP', val: '≤ 2.5s' },
+        { type: 'kv' as const, key: 'INP', val: '≤ 200ms' },
+        { type: 'kv' as const, key: 'CLS', val: '≤ 0.1' },
+        { type: 'comment' as const, text: 'plus schema, hreflang, crawl' },
+        { type: 'blink' as const },
+      ],
     },
     {
       title: 'Google Ads Campaign Brief',
@@ -96,6 +127,13 @@ export default async function Resources({ params }: Props) {
       cta: 'Notify me',
       download: false,
       muted: true,
+      termTitle: '~/google-ads-brief.md',
+      preview: [
+        { type: 'cmd' as const, text: 'cat google-ads-brief.md' },
+        { type: 'output' as const, text: 'File in progress...' },
+        { type: 'comment' as const, text: 'subscribe to be notified' },
+        { type: 'blink' as const },
+      ],
     },
   ];
 
@@ -153,8 +191,8 @@ export default async function Resources({ params }: Props) {
               <div className="absolute inset-0 bg-gradient-to-br from-purple-accent/10 via-transparent to-cyan/5 blur-2xl"></div>
 
               <PixelCard variant="glow" className="relative border-purple-accent/40 p-8 md:p-12">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-                  <div className="lg:col-span-2 space-y-6">
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+                  <div className="lg:col-span-3 space-y-6">
                     <div className="flex items-center gap-3 flex-wrap">
                       <PixelBadge variant="accent" size="md">
                         <Github className="w-3 h-3 mr-1.5 inline" />
@@ -185,20 +223,38 @@ export default async function Resources({ params }: Props) {
                         ),
                       )}
                     </div>
+
+                    <div className="pt-2">
+                      <a
+                        href="https://github.com/XxAKLONxX"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block"
+                      >
+                        <PixelButton variant="accent" size="lg">
+                          View on GitHub
+                          <ExternalLink className="w-4 h-4 ml-2 inline" />
+                        </PixelButton>
+                      </a>
+                    </div>
                   </div>
 
-                  <div className="flex lg:justify-end">
-                    <a
-                      href="https://github.com/XxAKLONxX"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block"
-                    >
-                      <PixelButton variant="accent" size="lg">
-                        View on GitHub
-                        <ExternalLink className="w-4 h-4 ml-2 inline" />
-                      </PixelButton>
-                    </a>
+                  {/* Terminal preview */}
+                  <div className="lg:col-span-2">
+                    <Terminal
+                      title="~/XxAKLONxX/seo-tools"
+                      lines={[
+                        { type: 'cmd', text: 'git clone seo-tools' },
+                        { type: 'output', text: 'Cloning... ✓' },
+                        { type: 'comment', text: 'Python utilities' },
+                        { type: 'kv', key: 'sitemap', val: 'adaptive crawler + Playwright' },
+                        { type: 'kv', key: 'gsc-api', val: 'bulk URL inspection' },
+                        { type: 'kv', key: 'serp', val: 'fuzzy keyword tracking' },
+                        { type: 'kv', key: 'meta', val: 'bulk description generator' },
+                        { type: 'comment', text: 'license: open' },
+                        { type: 'blink' },
+                      ]}
+                    />
                   </div>
                 </div>
               </PixelCard>
@@ -258,6 +314,15 @@ export default async function Resources({ params }: Props) {
                           {tpl.description}
                         </p>
                       </div>
+
+                      {/* Terminal preview */}
+                      {tpl.preview && (
+                        <Terminal
+                          title={tpl.termTitle}
+                          lines={tpl.preview}
+                          className={tpl.muted ? 'opacity-60' : ''}
+                        />
+                      )}
 
                       {/* Meta */}
                       <div className="flex flex-wrap gap-4 text-xs font-mono text-muted-foreground pt-4 border-t border-border">
