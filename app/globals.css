@@ -72,6 +72,9 @@
 @theme inline {
   --font-sans: 'Geist', 'Geist Fallback';
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-cyan: var(--cyan);
+  --color-cyan-light: var(--cyan-light);
+  --color-purple-accent: var(--purple-accent);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
