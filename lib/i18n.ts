@@ -1,9 +1,10 @@
 // Site-wide SEO + i18n configuration
 
-export const SITE_URL = 'https://seo-ghassen.ghassenbahroun.workers.dev';
+export const SITE_URL = 'https://ghassen-bahroun.pages.dev';
 export const SITE_NAME = 'Ghassen Bahroun';
 export const SITE_AUTHOR = 'Ghassen Bahroun';
 export const GITHUB_URL = 'https://github.com/XxAKLONxX';
+export const COURSERA_URL = 'https://www.coursera.org/user/d0bed15784cda2c45390abd360c69aa5';
 export const EMAIL = 'ghassenbahroun@yahoo.fr';
 export const PHONE = '+216 58851996';
 
@@ -75,19 +76,19 @@ export const pageSEO: Record<PageKey, PageSEO> = {
       keyword: 'SEM specialist Tunisia',
       title: 'Experience — SEM Specialist Tunisia | Ghassen Bahroun',
       description:
-        'SEM specialist experience in Tunisia: Pinet Industrie, TakiAcademy, WIC healthcare, Bebrandy Qatar. 36+ SEA campaigns across international markets.',
+        'SEM specialist experience in Tunisia: Pinet Industrie, TakiAcademy, WIC healthcare, BeBrandy Qatar. 36+ SEA campaigns across international markets.',
     },
     fr: {
       keyword: 'spécialiste SEM Tunisie',
       title: 'Expérience — Spécialiste SEM Tunisie | Ghassen Bahroun',
       description:
-        'Expérience spécialiste SEM en Tunisie : Pinet Industrie, TakiAcademy, WIC, Bebrandy Qatar. 36+ campagnes SEA sur les marchés internationaux.',
+        'Expérience spécialiste SEM en Tunisie : Pinet Industrie, TakiAcademy, WIC, BeBrandy Qatar. 36+ campagnes SEA sur les marchés internationaux.',
     },
     ar: {
       keyword: 'متخصص SEM تونس',
       title: 'الخبرة — متخصص SEM في تونس | غسان بحرون',
       description:
-        'خبرة متخصص SEM في تونس: Pinet Industrie، TakiAcademy، WIC، Bebrandy قطر. أكثر من 36 حملة SEA عبر الأسواق الدولية.',
+        'خبرة متخصص SEM في تونس: Pinet Industrie، TakiAcademy، WIC، BeBrandy قطر. أكثر من 36 حملة SEA عبر الأسواق الدولية.',
     },
   },
   skills: {

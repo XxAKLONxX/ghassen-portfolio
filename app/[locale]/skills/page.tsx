@@ -7,7 +7,7 @@ import { PixelBadge } from '@/components/pixel-badge';
 import { PixelGrid } from '@/components/pixel-grid';
 import { JsonLd } from '@/components/json-ld';
 import { PixelIcon } from '@/components/pixel-icon';
-import { locales, pageSEO, type Locale } from '@/lib/i18n';
+import { locales, pageSEO, type Locale, COURSERA_URL } from '@/lib/i18n';
 import { absUrl, languageAlternates, breadcrumbSchema, skillsSchema } from '@/lib/schema';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -184,6 +184,102 @@ export default async function Skills({ params }: Props) {
                     <PixelIcon name={item.icon} size={48} alt={item.title} className="text-cyan" />
                     <h3 className="font-semibold text-foreground text-lg">{item.title}</h3>
                     <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                  </div>
+                </PixelCard>
+              ))}
+            </PixelGrid>
+          </div>
+        </section>
+
+        {/* Certifications */}
+        <section className="py-16 md:py-24 border-t border-border">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+              <div className="space-y-2">
+                <h2 className="text-2xl md:text-3xl font-bold flex items-center gap-3">
+                  <PixelIcon name="graduation-cap" size={32} alt="" className="text-cyan" />
+                  Certifications
+                </h2>
+                <p className="text-muted-foreground">
+                  Ongoing study through Coursera — SEO, marketing strategy, and business.
+                </p>
+              </div>
+              <a
+                href={COURSERA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-cyan hover:text-cyan-light font-mono text-sm transition-colors"
+              >
+                View Coursera profile
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <PixelGrid cols={2} gap="md">
+              {[
+                {
+                  title: 'Advanced Search Engine Optimization Strategies',
+                  issuer: 'University of California, Davis',
+                  date: 'Jan 2023',
+                  tags: ['SEO', 'Strategy', 'Data Analysis'],
+                },
+                {
+                  title: 'Google SEO Capstone Project',
+                  issuer: 'University of California, Davis',
+                  date: 'Jun 2023',
+                  tags: ['SEO', 'Capstone'],
+                },
+                {
+                  title: 'Google SEO Fundamentals',
+                  issuer: 'University of California, Davis',
+                  date: 'Apr 2023',
+                  tags: ['SEO', 'Audit', 'Marketing'],
+                },
+                {
+                  title: 'Introduction to Google SEO',
+                  issuer: 'University of California, Davis',
+                  date: 'Mar 2020',
+                  tags: ['SEO', 'Algorithms'],
+                },
+                {
+                  title: 'Increase SEO Traffic with WordPress',
+                  issuer: 'Coursera',
+                  date: 'Aug 2023',
+                  tags: ['SEO', 'WordPress', 'Web Dev'],
+                },
+                {
+                  title: 'Create Your E-commerce Store with Shopify',
+                  issuer: 'Coursera',
+                  date: 'Aug 2023',
+                  tags: ['E-commerce', 'Shopify'],
+                },
+                {
+                  title: 'Positioning: What You Need for a Successful Marketing Strategy',
+                  issuer: 'IE Business School',
+                  date: 'Feb 2020',
+                  tags: ['Brand', 'Marketing Strategy'],
+                },
+                {
+                  title: 'Market Research and Consumer Behavior',
+                  issuer: 'IE Business School',
+                  date: 'Feb 2020',
+                  tags: ['Market Research', 'Analysis'],
+                },
+              ].map((cert) => (
+                <PixelCard key={cert.title} variant="subtle">
+                  <div className="flex gap-4 items-start">
+                    <PixelIcon name="graduation-cap" size={28} alt="" className="text-cyan shrink-0 mt-1" />
+                    <div className="space-y-2 flex-grow">
+                      <h3 className="font-semibold text-foreground leading-snug">{cert.title}</h3>
+                      <p className="text-cyan font-mono text-xs">
+                        {cert.issuer} · {cert.date}
+                      </p>
+                      <div className="flex flex-wrap gap-1.5 pt-1">
+                        {cert.tags.map((tag) => (
+                          <PixelBadge key={tag} variant="muted" size="sm">{tag}</PixelBadge>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </PixelCard>
               ))}

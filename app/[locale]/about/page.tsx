@@ -7,7 +7,7 @@ import { PixelBadge } from '@/components/pixel-badge';
 import { PixelGrid } from '@/components/pixel-grid';
 import { JsonLd } from '@/components/json-ld';
 import { PixelIcon } from '@/components/pixel-icon';
-import { locales, pageSEO, type Locale } from '@/lib/i18n';
+import { locales, pageSEO, type Locale, COURSERA_URL } from '@/lib/i18n';
 import { absUrl, languageAlternates, breadcrumbSchema, aboutPageSchema } from '@/lib/schema';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -43,33 +43,43 @@ export default async function About({ params }: Props) {
       ],
     },
     {
-      year: '2023 - 2025',
+      year: 'Jan 2023 - Aug 2025',
       role: 'SEO/SEM Strategist',
-      company: 'Takiacademy, Tunisia',
+      company: 'TakiAcademy, Tunisia',
       highlights: [
         'Led SEO strategy for 4 major websites from development',
         'Managed and optimized 36 SEA campaigns over 18 months',
-        'Developed integrated performance tracking across portfolio',
+        'Integrated performance tracking with GA4 and Looker Studio',
       ],
     },
     {
       year: '2025',
-      role: 'Freelance Consultant',
-      company: 'Way Interactive Convergence & Bebrandy',
+      role: 'Freelance SEO/SEM Consultant',
+      company: 'WIC — Healthcare',
       highlights: [
-        'Managed SEO/SEM for healthcare sector (4 campaigns)',
-        'Executed search campaigns for international markets',
-        'Provided strategic services for Qatari clients',
+        'Managed SEO/SEM for medical websites (wic-doctor.com, wic-ophtacare.com)',
+        'Designed and ran 4 ads campaigns for the healthcare sector',
+        'Technical SEO, website rework and performance optimization',
+      ],
+    },
+    {
+      year: '2025',
+      role: 'Freelance SEO/SEM Consultant',
+      company: 'BeBrandy Agency (Qatar)',
+      highlights: [
+        'International SEO/SEM for Qatari client (EAG.qa)',
+        'Executed localized search campaigns for the Qatar market',
+        'Strategy aligned to regional audience behavior',
       ],
     },
     {
       year: '2025 - Present',
       role: 'SEO/SEM Specialist',
-      company: 'Pinet Industry, Tunisia',
+      company: 'Pinet Industrie, Tunisia',
       highlights: [
-        'Developing digital marketing campaigns across multiple channels',
-        'Managing search engine marketing initiatives',
-        'Optimizing performance across portfolio',
+        'Multilingual digital marketing across 5 European markets (FR, DE, IT, ES, UK)',
+        'Managing search engine marketing initiatives and SEO strategy',
+        'Optimizing performance and reporting across the full portfolio',
       ],
     },
   ];
@@ -191,7 +201,7 @@ export default async function About({ params }: Props) {
         <section className="py-16 md:py-24 border-t border-border">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-12">Education & Learning</h2>
-            <PixelGrid cols={2} gap="lg">
+            <PixelGrid cols={3} gap="lg">
               <PixelCard variant="glow">
                 <div className="space-y-3">
                   <h3 className="font-semibold text-foreground">Bachelor of Business Administration</h3>
@@ -208,6 +218,29 @@ export default async function About({ params }: Props) {
                   <p className="text-muted-foreground text-sm">
                     Comprehensive web development training with focus on practical skills
                   </p>
+                </div>
+              </PixelCard>
+              <PixelCard variant="glow">
+                <div className="space-y-3 flex flex-col h-full">
+                  <div className="flex items-start gap-3">
+                    <PixelIcon name="graduation-cap" size={28} alt="" className="text-cyan shrink-0 mt-0.5" />
+                    <div className="space-y-1">
+                      <h3 className="font-semibold text-foreground">Coursera — SEO &amp; Marketing</h3>
+                      <p className="text-cyan font-mono text-sm">UC Davis · IE Business School</p>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground text-sm">
+                    8 courses in SEO fundamentals, advanced strategies, capstone, marketing
+                    positioning and consumer behavior.
+                  </p>
+                  <a
+                    href={COURSERA_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cyan hover:text-cyan-light font-mono text-xs mt-auto inline-flex items-center gap-1"
+                  >
+                    View full profile <span aria-hidden="true">→</span>
+                  </a>
                 </div>
               </PixelCard>
             </PixelGrid>

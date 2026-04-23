@@ -29,7 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const experienceForSchema = [
   { role: 'SEO/SEM Specialist', company: 'Pinet Industrie', startDate: '2025-09', description: 'Multilingual digital marketing across 5 European markets.' },
   { role: 'SEO/SEM Strategist', company: 'TakiAcademy', startDate: '2023-01', endDate: '2025-08', description: 'Led SEO for 4 sites; managed 36 SEA campaigns over 18 months.' },
-  { role: 'Freelance SEO/SEM Consultant', company: 'Way Interactive Convergence & Bebrandy', startDate: '2025-03', endDate: '2025-12', description: 'Healthcare SEO/SEM and Qatar market campaigns.' },
+  { role: 'Freelance SEO/SEM Consultant', company: 'BeBrandy Agency (Qatar)', startDate: '2025-08', endDate: '2025-08', description: 'International SEO/SEM for EAG.qa; Qatar market campaigns.' },
+  { role: 'Freelance SEO/SEM Consultant', company: 'WIC — Healthcare', startDate: '2025-03', endDate: '2025-06', description: 'Medical-sector SEO/SEM and website rework (wic-doctor.com, wic-ophtacare.com).' },
   { role: 'Sales & Webmaster', company: 'Tangorythm, Djerba', startDate: '2019-01', endDate: '2022-12', description: 'Tourism industry web development and SEO.' },
 ];
 
@@ -40,7 +41,7 @@ export default async function Experience({ params }: Props) {
   const experiences = [
     {
       title: 'SEO/SEM Specialist',
-      company: 'Pinet Industry, Tunisia',
+      company: 'Pinet Industrie, Tunisia',
       period: 'September 2025 - Present',
       description:
         'Developing comprehensive digital marketing campaigns across multiple channels with focus on search engine optimization and paid advertising.',
@@ -53,7 +54,7 @@ export default async function Experience({ params }: Props) {
     },
     {
       title: 'SEO/SEM Strategist',
-      company: 'Takiacademy, Tunisia',
+      company: 'TakiAcademy, Tunisia',
       period: '2023 - August 2025',
       description:
         'Strategic leadership role managing SEO initiatives across a portfolio of major websites with integrated performance tracking and optimization.',
@@ -67,26 +68,26 @@ export default async function Experience({ params }: Props) {
     },
     {
       title: 'Freelance SEO/SEM Consultant',
-      company: 'Way Interactive Convergence',
-      period: 'March - June 2025 (extending to March 2026)',
+      company: 'WIC — Healthcare',
+      period: 'March - June 2025',
       description:
-        'Provided specialized SEO/SEM services for healthcare sector with focus on search campaign optimization and technical implementation.',
+        'Specialized SEO/SEM for the healthcare sector with focus on search campaign optimization and technical implementation.',
       achievements: [
         'Managed SEO/SEM strategy for medical websites (wic-doctor.com, wic-ophtacare.com)',
-        'Developed and executed 4 ads campaigns for healthcare sector',
-        'Website rework and optimization',
+        'Developed and executed 4 ads campaigns for the healthcare sector',
+        'Website rework and technical optimization',
       ],
       tags: ['Healthcare', 'SEM', 'Google Ads', 'Technical SEO'],
     },
     {
       title: 'Freelance SEO/SEM Consultant',
-      company: 'Bebrandy (Qatar-based)',
+      company: 'BeBrandy Agency (Qatar)',
       period: 'August 2025',
       description:
-        'Provided international SEO/SEM services for Qatari client with localized search campaign strategy.',
+        'International SEO/SEM for Qatari client with localized search campaign strategy.',
       achievements: [
-        'Provided SEO/SEM services for EAG.qa',
-        'Executed search campaigns targeting Qatari audience',
+        'SEO/SEM services for EAG.qa',
+        'Executed search campaigns targeting the Qatari audience',
         'International market optimization',
       ],
       tags: ['International SEO', 'SEM', 'Localization'],

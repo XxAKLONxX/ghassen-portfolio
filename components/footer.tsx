@@ -4,7 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Github, Download, Mail } from 'lucide-react';
-import { locales, defaultLocale, type Locale, GITHUB_URL, EMAIL, SITE_NAME, ui, pagePaths } from '@/lib/i18n';
+import { PixelIcon } from '@/components/pixel-icon';
+import { locales, defaultLocale, type Locale, GITHUB_URL, COURSERA_URL, EMAIL, SITE_NAME, ui, pagePaths } from '@/lib/i18n';
 
 function getLocaleFromPath(pathname: string): Locale {
   const seg = pathname.split('/').filter(Boolean)[0];
@@ -71,6 +72,17 @@ export function Footer() {
                 >
                   <Github className="w-3.5 h-3.5" />
                   GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href={COURSERA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-muted-foreground text-sm hover:text-cyan transition-colors"
+                >
+                  <PixelIcon name="graduation-cap" size={14} alt="" className="text-current" />
+                  Coursera
                 </a>
               </li>
               <li>

@@ -8,6 +8,8 @@ import { PixelCard } from '@/components/pixel-card';
 import { PixelBadge } from '@/components/pixel-badge';
 import { PixelGrid } from '@/components/pixel-grid';
 import { PixelIcon } from '@/components/pixel-icon';
+import { Github } from 'lucide-react';
+import { COURSERA_URL, GITHUB_URL } from '@/lib/i18n';
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -219,18 +221,22 @@ export function ContactForm() {
 
               <div className="flex justify-center gap-4 flex-wrap">
                 {[
-                  { name: 'GitHub', icon: '🔧', href: 'https://github.com/XxAKLONxX' },
-                  { name: 'Email', icon: '✉', href: 'mailto:ghassenbahroun@yahoo.fr' },
-                  { name: 'LinkedIn', icon: '💼', href: '#' },
+                  { name: 'GitHub', iconName: null, iconComp: 'Github', href: GITHUB_URL },
+                  { name: 'Email', iconName: 'envelope', iconComp: null, href: 'mailto:ghassenbahroun@yahoo.fr' },
+                  { name: 'Coursera', iconName: 'graduation-cap', iconComp: null, href: COURSERA_URL },
                 ].map((social) => (
                   <a
                     key={social.name}
                     href={social.href}
                     target={social.href.startsWith('http') ? '_blank' : undefined}
                     rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-sm hover:border-cyan hover:bg-cyan/5 transition-all group"
+                    className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-sm hover:border-cyan hover:bg-cyan/5 transition-all group text-muted-foreground hover:text-cyan"
                   >
-                    <span className="text-2xl">{social.icon}</span>
+                    {social.iconComp === 'Github' ? (
+                      <Github className="w-5 h-5" />
+                    ) : (
+                      <PixelIcon name={social.iconName!} size={22} alt="" className="text-current" />
+                    )}
                     <span className="font-mono font-semibold group-hover:text-cyan transition-colors">
                       {social.name}
                     </span>
